@@ -8,6 +8,9 @@ echo start
 serverPort=$1
 echo $1
 
+environment=$2
+sudo su
+
 #####
 ##### DONT CHANGE HERE ##############
 #jar file
@@ -15,35 +18,31 @@ echo $1
 echo $WORKSPACE
 sourFile=$WORKSPACE/HelloProject/target/TestApp-1.0-SNAPSHOT.jar
 echo $sourFile
-destFile=/data/HelloProject/TestApp-1.0-SNAPSHOT.jar
+destFile=/data/$environment/HelloProject/TestApp-1.0-SNAPSHOT.jar
 echo $destFile
 ### FUNCTIONS
 ##############
 
-function stopServer(){
+#StopServer
 echo insideStop
 echo ” “
 echo “Stoping process on port: $serverPort”
 fuser -k $severport/tcp > redirection &
 echo ” “
-}
 
-function deleteFiles(){
+#DeleteFiles
 echo “Deleting $destFile”
 rm -rf $destFile
 
 echo ” “
-}
 
-function copyFiles(){
+#CopyFiles
 echo “Copying files from $sourFile”
 cp $sourFile $destFile
 
 echo ” “
-}
 
-function run(){
-
+#Run
 #echo “java -jar $destFile –server.port=$serverPort $properties” | at now + 1 minutes
 
 nohup nice java -jar $destFile –server.port=$serverPort &
@@ -51,20 +50,3 @@ nohup nice java -jar $destFile –server.port=$serverPort &
 echo “COMMAND: nohup nice java -jar $destFile “
 
 echo ” “
-}
-
-### FUNCTIONS CALLS
-#####################
-
-# 1 – stop server on port …
-stopServer
-
-# 2 – delete destinations folder content
-deleteFiles
-
-# 3 – copy files to deploy dir
-copyFiles
-
-changeFilePermission
-# 4 – start server
-run
