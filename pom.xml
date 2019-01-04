@@ -67,14 +67,6 @@
                     </execution>
                 </executions>
             </plugin>
-
-            <plugin>
-                <groupId>pl.project13.maven</groupId>
-                <artifactId>git-commit-id-plugin</artifactId>
-                <configuration>
-                    <excludeProperties>git.build.user.*,git.commit.user.*,git.remote.*,git.closest.*</excludeProperties>
-                </configuration>
-            </plugin>
         </plugins>
     </build>
 

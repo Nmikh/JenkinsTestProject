@@ -8,9 +8,6 @@ echo start
 serverPort=$1
 echo $1
 
-environment=$2
-sudo su
-
 #####
 ##### DONT CHANGE HERE ##############
 #jar file
@@ -45,7 +42,7 @@ echo ” “
 #Run
 #echo “java -jar $destFile –server.port=$serverPort $properties” | at now + 1 minutes
 
-nohup nice java -jar $destFile –server.port=$serverPort &
+nohup nice java -jar $destFile –server.port=$serverPort
 
 echo “COMMAND: nohup nice java -jar $destFile “
 
