@@ -8,9 +8,6 @@ echo start
 serverPort=$1
 echo $1
 
-environment=$2
-sudo su
-
 #####
 ##### DONT CHANGE HERE ##############
 #jar file
@@ -18,7 +15,7 @@ sudo su
 echo $WORKSPACE
 sourFile=$WORKSPACE/HelloProject/target/TestApp-1.0-SNAPSHOT.jar
 echo $sourFile
-destFile=/data/$environment/HelloProject/TestApp-1.0-SNAPSHOT.jar
+destFile=/data/HelloProject/TestApp-1.0-SNAPSHOT.jar
 echo $destFile
 ### FUNCTIONS
 ##############
