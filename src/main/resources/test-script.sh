@@ -18,7 +18,7 @@ sudo su
 echo $WORKSPACE
 sourFile=$WORKSPACE/target/TestApp-1.0-SNAPSHOT.jar
 echo $sourFile
-destFile=/data/$environment/HelloProject/TestApp-1.0-SNAPSHOT.jar
+destFile=/var/lib/jenkins/jobs/data/TestApp-1.0-SNAPSHOT.jar
 echo $destFile
 ### FUNCTIONS
 ##############
