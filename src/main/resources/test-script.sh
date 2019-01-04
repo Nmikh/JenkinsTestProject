@@ -44,7 +44,7 @@ echo ” “
 
 nohup nice java -jar $destFile –server.port=$serverPort &
 
-wait
+sleep 200000
 
 echo “COMMAND: nohup nice java -jar $destFile “
 
