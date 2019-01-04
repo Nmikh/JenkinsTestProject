@@ -11,8 +11,8 @@ echo $destFile
 #StopServer
 echo insideStop
 echo ” “
-echo “Stoping process on port: 9000”
-fuser -k 9000/tcp > redirection &
+echo “Stoping process on port: 9001”
+fuser -k 9001/tcp > redirection &
 echo ” “
 
 #DeleteFiles
@@ -29,7 +29,7 @@ echo ” “
 
 #Run
 
-nohup nice java -jar $destFile –server.port=9000 &
+nohup nice java -jar $destFile –server.port=9001 &
 
 echo “COMMAND: nohup nice java -jar $destFile “
 
