@@ -42,7 +42,9 @@ echo ” “
 #Run
 #echo “java -jar $destFile –server.port=$serverPort $properties” | at now + 1 minutes
 
-nohup nice java -jar $destFile –server.port=$serverPort
+nohup nice java -jar $destFile –server.port=$serverPort &
+
+wait
 
 echo “COMMAND: nohup nice java -jar $destFile “
 
