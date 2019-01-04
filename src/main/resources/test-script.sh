@@ -16,7 +16,7 @@ sudo su
 #jar file
 # $WORKSPACE is a jenkins var
 echo $WORKSPACE
-sourFile=$WORKSPACE/HelloProject/target/TestApp-1.0-SNAPSHOT.jar
+sourFile=$WORKSPACE/target/TestApp-1.0-SNAPSHOT.jar
 echo $sourFile
 destFile=/data/$environment/HelloProject/TestApp-1.0-SNAPSHOT.jar
 echo $destFile
