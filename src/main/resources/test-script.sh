@@ -15,10 +15,8 @@ echo $destFile
 echo insideStop
 echo ” “
 echo “Stoping process on port: 9001”
-fuser -k 9001/tcp > redirection &
+sudo fuser -k 9001/tcp > redirection &
 echo ” “
-
-sleep 200
 
 #DeleteFiles
 echo “Deleting $destFile”
