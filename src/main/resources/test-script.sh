@@ -1,6 +1,5 @@
 ##chmod +x /var/lib/jenkins/workspace/TestApp/src/main/resources/test-script.sh
 #BUILD_ID=dontKillMe /var/lib/jenkins/workspace/TestApp/src/main/resources/test-script.sh
-
 ##command-jenkins:: BUILD_ID=dontKillMe /var/lib/jenkins/workspace/HelloProject/src/main/resources/test-script.sh
 
 echo start
@@ -14,8 +13,8 @@ echo $destFile
 #StopServer
 echo insideStop
 echo ” “
-echo “Stoping process on port: 9001”
-sudo fuser -k 9001/tcp > redirection &
+echo “Stoping process on port: 9050”
+fuser -k 9050/tcp > redirection &
 echo ” “
 
 #DeleteFiles
@@ -32,9 +31,7 @@ echo ” “
 
 #Run
 
-nohup nice java -jar $destFile –server.port=9001 &
-
-sleep 40
+nohup nice java -jar $destFile –server.port=9050 &
 
 echo “COMMAND: nohup nice java -jar $destFile “
 
