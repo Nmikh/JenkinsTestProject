@@ -32,7 +32,7 @@ echo ” “
 
 #Run
 
-nohup nice java -jar $destFile &
+#nohup nice java -jar $destFile –server.port=9001 &
 
 sleep 40
 
