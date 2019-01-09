@@ -18,6 +18,8 @@ echo “Stoping process on port: 9001”
 fuser -k 9001/tcp > redirection &
 echo ” “
 
+sleep 200
+
 #DeleteFiles
 echo “Deleting $destFile”
 rm -rf $destFile
@@ -32,7 +34,7 @@ echo ” “
 
 #Run
 
-#nohup nice java -jar $destFile –server.port=9001 &
+nohup nice java -jar $destFile –server.port=9001 &
 
 sleep 40
 
