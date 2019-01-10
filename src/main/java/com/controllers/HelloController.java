@@ -10,6 +10,9 @@ public class HelloController {
 
     @GetMapping("/hello")
     public ResponseEntity home() {
+        int a = 21;
+        String b = "ssss";
+
         return new ResponseEntity("Hello from Rest", HttpStatus.OK);
     }
 }
