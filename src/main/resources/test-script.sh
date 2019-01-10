@@ -5,9 +5,9 @@
 echo start
 
 echo $WORKSPACE
-sourFile=$WORKSPACE/target/TestApp-1.0-SNAPSHOT.jar
+sourFile=$WORKSPACE/target/TestApp-2.0-SNAPSHOT.jar
 echo $sourFile
-destFile=/var/lib/jenkins/jobs/data/TestApp-1.0-SNAPSHOT.jar
+destFile=/var/lib/jenkins/jobs/data/TestApp-2.0-SNAPSHOT.jar
 echo $destFile
 
 #StopServer
